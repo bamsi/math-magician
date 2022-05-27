@@ -1,5 +1,4 @@
 /* eslint react/prefer-stateless-function: [0] */
-/* eslint linebreak-style: ["error", "windows"] */
 
 import React from 'react';
 import PropTypes from 'prop-types';
