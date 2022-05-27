@@ -17,7 +17,6 @@ class App extends React.Component {
   handleChange(e) {
     const data = calculate(this.state, e);
     this.setState(data);
-    console.log(data);
   }
 
   render() {
