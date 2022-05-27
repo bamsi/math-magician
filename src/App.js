@@ -1,37 +1,28 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
 import Calculator from './components/calculator';
 import calculate from './components/logic/calculate';
 
-class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      total: 0,
-      next: '',
-      operation: '',
-    };
-    this.handleChange = this.handleChange.bind(this);
-  }
+const App = () => {
+  const [total, setTotal] = useState(0);
+  const [next, setNext] = useState(null);
+  const [operation, setOperation] = useState(null);
 
-  handleChange(e) {
-    const data = calculate(this.state, e);
-    this.setState(data);
-  }
+  const handleChange = (e) => {
+    const data = calculate({ total, next, operation }, e);
+    setTotal(data.total);
+    setNext(data.next);
+    setOperation(data.operation);
+  };
 
-  render() {
-    const { total } = this.state;
-    const { next } = this.state;
-    const { operation } = this.state;
-    return (
-      <Calculator
-        clickHandler={this.handleChange}
-        total={total}
-        next={next}
-        operation={operation}
-      />
-    );
-  }
-}
+  return (
+    <Calculator
+      clickHandler={handleChange}
+      total={total}
+      next={next}
+      operation={operation}
+    />
+  );
+};
 
 export default App;
