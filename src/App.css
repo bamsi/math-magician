@@ -12,11 +12,12 @@ body {
   grid-template-columns: repeat(4, 1fr);
 }
 
-.wrapper > div {
+.wrapper > button {
   padding: 1.2rem 2rem;
   border: 1px solid #bababa;
   background-color: #e0e0e0;
-  text-align: center;
+  border-radius: 0;
+  cursor: pointer;
 }
 
 .result {
