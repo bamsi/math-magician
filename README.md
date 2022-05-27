@@ -38,7 +38,7 @@ You can add scores to the list and use refresh button to retrieve data.
 
 The website has been tested using css, html and javascript linters. You can run the following command to test the code:
 
-- `npx hint .` web hint to test html
+- `npx eslint .` web hint to test javascript
 - `npx stylelint "**/*.{css,scss}` for style
 
 ## Deployment
