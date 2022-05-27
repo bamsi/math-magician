@@ -1,5 +1,3 @@
-/* eslint react/prefer-stateless-function: [0] */
-
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -16,6 +14,8 @@ class Calculator extends React.Component {
 
   render() {
     const { total } = this.props;
+    const { next } = this.props;
+    const { operation } = this.props;
     const buttons = [
       { style: '', value: 'AC' },
       { style: '', value: '+/-' },
@@ -44,7 +44,9 @@ class Calculator extends React.Component {
     return (
       <div className="wrapper">
         <button className="result" type="button">
-          {total || 0}
+          { total }
+          { operation }
+          { next }
         </button>
         {items}
       </div>
@@ -54,11 +56,15 @@ class Calculator extends React.Component {
 
 Calculator.propTypes = {
   total: PropTypes.number,
+  next: PropTypes.string,
+  operation: PropTypes.string,
   clickHandler: PropTypes.func.isRequired,
 };
 
 Calculator.defaultProps = {
-  total: 0,
+  total: null,
+  next: null,
+  operation: null,
 };
 
 export default Calculator;

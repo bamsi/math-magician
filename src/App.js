@@ -1,6 +1,3 @@
-/* eslint react/prefer-stateless-function: [0] */
-/* eslint-disable react/jsx-props-no-spreading */
-
 import React from 'react';
 import './App.css';
 import Calculator from './components/calculator';
@@ -20,11 +17,20 @@ class App extends React.Component {
   handleChange(e) {
     const data = calculate(this.state, e);
     this.setState(data);
+    console.log(data);
   }
 
   render() {
+    const { total } = this.state;
+    const { next } = this.state;
+    const { operation } = this.state;
     return (
-      <Calculator clickHandler={this.handleChange} {...this.state} />
+      <Calculator
+        clickHandler={this.handleChange}
+        total={total}
+        next={next}
+        operation={operation}
+      />
     );
   }
 }
