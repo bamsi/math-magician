@@ -1,13 +1,5 @@
-/* body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  font-weight: 500;
-  font-size: 20px;
-} */
 body {
-  background-color: #1C1D22;
+  background-color: #1c1d22;
   color: rgb(255, 255, 255, 0.7);
 }
 
@@ -34,8 +26,13 @@ body {
   grid-template-columns: repeat(4, 1fr);
   height: 400px;
   width: 400px;
-  border: 3px solid #E7E9EB;
+  border: 3px solid #e7e9eb;
   border-radius: 7px;
+}
+
+button {
+  font-size: 18px;
+  font-weight: 700;
 }
 
 .wrapper > button {
@@ -44,11 +41,6 @@ body {
   background-color: #e0e0e0;
   border-radius: 0;
   cursor: pointer;
-}
-
-button {
-  font-size: 18px;
-  font-weight: 700;
 }
 
 .result {
