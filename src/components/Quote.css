@@ -1,0 +1,13 @@
+.quote-section {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    height: 60vh;
+}
+
+.quote-section p {
+    font-size: 32px;
+    font-weight: 500;
+    width: 60%;
+}

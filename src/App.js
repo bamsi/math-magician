@@ -20,7 +20,7 @@ const App = () => {
   };
 
   return (
-    <div className="wrapper">
+    <div className="container">
       <Header />
       <Routes>
         <Route path="/" element={<Home />} />
