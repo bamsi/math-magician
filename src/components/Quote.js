@@ -1,11 +1,9 @@
-import React from "react";
+import React from 'react';
 
-const Quote = () => {
-  return (
-    <section>
-      <p>Mathematician is not about numbers!</p>
-    </section>
-  );
-};
+const Quote = () => (
+  <section>
+    <p>Mathematician is not about numbers!</p>
+  </section>
+);
 
 export default Quote;
