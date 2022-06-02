@@ -9,6 +9,10 @@
 
 React
 
+## Live Demo
+[Heroku link](https://react-mathmagician.herokuapp.com/)
+[Netlify link](https://6298a8fd99c96f0b7f65c3e4--neon-tiramisu-e04b96.netlify.app/)
+
 ## Getting Started
 
 Please do the following to setup project locally
