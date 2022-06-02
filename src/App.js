@@ -1,7 +1,11 @@
 import React, { useState } from 'react';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import Calculator from './components/calculator';
+import Header from './components/Header';
+import Home from './components/Home';
 import calculate from './components/logic/calculate';
+import Quote from './components/Quote';
 
 const App = () => {
   const [total, setTotal] = useState(0);
@@ -16,12 +20,24 @@ const App = () => {
   };
 
   return (
-    <Calculator
-      clickHandler={handleChange}
-      total={total}
-      next={next}
-      operation={operation}
-    />
+    <div className="container">
+      <Header />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route
+          path="/calculator"
+          element={(
+            <Calculator
+              clickHandler={handleChange}
+              total={total}
+              next={next}
+              operation={operation}
+            />
+          )}
+        />
+        <Route path="/quote" element={<Quote />} />
+      </Routes>
+    </div>
   );
 };
 

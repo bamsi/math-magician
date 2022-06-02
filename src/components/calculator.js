@@ -34,7 +34,8 @@ const Calculator = ({
     items.push(
       <button
         type="button"
-        value={button.value}
+        key={button.value}
+        value={String(button.value)}
         className={button.style}
         onClick={onClickCall}
       >
@@ -43,14 +44,19 @@ const Calculator = ({
     );
   });
   return (
-    <div className="wrapper">
-      <button className="result" type="button">
-        {total}
-        {operation}
-        {next}
-      </button>
-      {items}
-    </div>
+    <section className="calculator-section">
+      <h2>Lets do some Math!</h2>
+      <div className="calculator-wrapper">
+        <div className="calculator">
+          <button className="result" type="button">
+            {total}
+            {operation}
+            {next}
+          </button>
+          {items}
+        </div>
+      </div>
+    </section>
   );
 };
 
